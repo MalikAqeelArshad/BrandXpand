@@ -1,0 +1,34 @@
+/* Rating Star Widgets Style */
+.rating-stars ul {
+    list-style-type:none;
+    padding:0;
+
+    -moz-user-select:none;
+    -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+    display:inline-block;
+
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+    font-size:2.5em; /* Change the size of the stars */
+    color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.onHover{
+    color:#FFCC36 !important;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected {
+    color:#FF912C !important;
+}
+.table#rates
+{
+    border-collapse:separate;
+    border-spacing:0 20px;
+}
+.f-size14{font-size:14px}

@@ -1,0 +1,125 @@
+/*
+Developer: Aqeel Malik;
+WhatsApp : +92 302 6262164;
+Email ID : Malik.AqeelArshad@gmail.com;
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+:root {
+	/*--brand: #dc3545;*/
+	--sidebar: #fff;
+	--linkActive: #fff;
+	--link: #C3272D;
+	--brand: #C3272D;
+	--linkBgActive: #C3272D;
+	--font-poppins: "Poppins", -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+body, .font-poppins {font-family: var(--font-poppins) !important}
+a, a:hover, a:focus { color: inherit; text-decoration: none; transition: all 0.3s }
+.size-xs {font-size: 10px !important}
+.size-sm {font-size: 12px !important}
+.size-md {font-size: 14px !important}
+.size-lg {font-size: 18px !important}
+.text-brand {color: var(--brand) !important}
+.bg-brand, .tbg-brand {background: var(--brand) !important}
+.bg-none {background: none !important}
+.rounded-left-0 {border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important}
+.rounded-right-0 {border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important}
+.focus-0:focus {box-shadow: none}
+.dropdown-item.active, .dropdown-item:active { background-color: #17a2b8 }
+[before-bg-inherit]:before,[after-bg-inherit]:after {background-color: inherit}
+label {font-size: 14px; font-weight: 500}
+.table thead th {font-weight: 600}
+.modal .modal-content {border-radius: 0}
+
+.dropdown-item.active, .dropdown-item:active,
+.dropdown-item:hover, .dropdown-item:focus {color: #fff; background-color: var(--brand); border-color: var(--brand)}
+.dropdown-item.active .text-brand, .dropdown-item:hover .text-brand, .dropdown-item:focus .text-brand {color: #fff !important}
+
+.form-control, .custom-select,
+.input-group .btn, .btn-group .btn,
+.input-group-text {border-width: 2px !important; border-radius: 0}
+.input-group-prepend {margin-right: -2px}
+.input-group-append {margin-left: -2px}
+.input-group-text {background-color: #f8f9fa}
+
+.form-control::placeholder, .custom-select::placeholder {color: #aaa}
+.form-control, .custom-select {font-size: 12px; border-color: rgba(145, 151, 158, 0.25)}
+.form-control:focus,
+.custom-select:focus {border-color: #ddd; box-shadow: 0 0 0 .2rem rgba(145, 151, 158, 0.1)}
+.form-control:not(textarea):not([class*=form-control-]),
+.custom-select:not([class*=custom-select-]) {height: calc(1.5em + .75rem + 12px)}
+.custom-select {background-image: url("../images/arrow-down.png"); background-size: auto}
+
+.note-editor {font-size: 13px}
+.note-editor p {margin-bottom: 0}
+/* More or Less text/button styling */
+.w2a-moreless-text.show {display: initial !important}
+.w2a-moreless-btn:before {content: attr(w2a-after)}
+.w2a-moreless-btn.collapsed:before {content: attr(w2a-before)}
+
+/* sorted table styling */
+[wcs-sorting-table] th:not(.not-sorted) [class*=fa] {position: relative; cursor: pointer}
+/*[wcs-sorting-table] th {position: relative; cursor: pointer}
+[wcs-sorting-table] th:not(.not-sorted):before,
+[wcs-sorting-table] th:not(.not-sorted):after {content:'';border:0 solid var(--light);width:8px;height:8px;position:absolute;right:0;-webkit-transform:rotate(45deg);transform:rotate(45deg); visibility: hidden}
+[wcs-sorting-table] th:not(.not-sorted):before{border-top-width:1px;border-left-width:1px; margin-top: 4px}
+[wcs-sorting-table] th:not(.not-sorted):after{border-right-width:1px;border-bottom-width:1px; margin-top:8px}
+[wcs-sorting-table] th:hover:before,
+[wcs-sorting-table] th:hover:after{visibility: visible}
+[wcs-sorting-table] th.not-sorted{cursor: default; pointer-events: none}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+---------------------------------------------------- */
+.navbar { min-height: 60px; padding: 10px }
+.line { width: 100%; height: 1px; border-bottom: 1px dashed #ddd; margin: 40px 0 }
+
+.wrapper { display: flex; align-items: stretch; margin-top: 60px }
+
+.sidebar { width: 250px; background: var(--sidebar); color: var(--link); transition: all 0.3s; z-index: 777 }
+.collapse-sidebar .sidebar { width: 80px; text-align: center }
+
+.brand-sm, .brand-lg { transition: margin 0.3s }
+.collapse-sidebar .brand-lg { margin-left: -100% !important; font-size: 0 }
+
+.brand-sm { position: absolute; margin-left: -100%; font-size: 1.5em; font-weight: 900; padding: 0 10px }
+.collapse-sidebar .brand-sm { position: relative; margin-left: 0 }
+
+.collapse-sidebar .sidebar ul li a { padding: 10px; text-align: center; font-size: 0.7rem}
+.collapse-sidebar .sidebar ul li a svg[class*=fa-] { display: block; font-size: 1.8em; margin: 0 auto 5px }
+
+.sidebar > ul > li { border-bottom: 1px solid rgba(0, 0, 0, 0.1); position: relative; }
+.sidebar ul li a { padding: 10px; display: block; position: relative }
+.sidebar ul ul li a { padding-left: 25px; font-size: 0.75rem}
+.sidebar ul li a:hover,
+.sidebar ul li.active > a { color: var(--linkActive); background: var(--linkBgActive) }
+.sidebar ul li a[aria-expanded="true"]  { color: var(--brand); background: #eee }
+.sidebar .dropdown-toggle::after { display: block; position: absolute; top: 50%; right: 20px; transform: translateY(50%) }
+.sidebar .dropdown-toggle[aria-expanded="true"]::after { transform: rotateX(180deg); }
+.navbar-nav .nav-item .nav-link .badge { position: absolute; top: 0.3rem; right: 0; font-weight: 400; font-size: 0.5rem }
+.navbar-nav .dropdown-toggle::after,
+.collapse-sidebar .sidebar .dropdown-toggle::after{display: none}
+.collapse-sidebar .sidebar .dropdown-toggle + ul { position: absolute; background: var(--light); left: 100%; top: 0; width: 0; min-width: 0; transition: all 270ms }
+.collapse-sidebar .sidebar .dropdown-toggle + ul.show { width: max-content; min-width: 200px; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) }
+.collapse-sidebar .sidebar .dropdown-toggle + ul.show li a {text-align: left}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+---------------------------------------------------- */
+
+.content { width: 100%; padding: 20px; min-height: calc(100vh - 60px); transition: all 0.3s }
+.profile .nav-tabs .nav-item {margin-bottom: -2px}
+.profile .nav-tabs .nav-item:first-child .nav-link {margin-left: -2px}
+.profile .nav-tabs .nav-link {border: 0; padding-bottom: .7rem}
+.profile .nav-tabs .nav-link:hover,
+.profile .nav-tabs .nav-item.show .nav-link,
+.profile .nav-tabs .nav-link.active {background: #f8f9fa}
+
+/* ---------------------------------------------------
+    MEDIA QUERIES
+---------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .sidebar { width: 80px; text-align: center; margin-left: -80px !important; overflow: hidden }
+    .collapse-sidebar .sidebar { margin-left: 0 !important; overflow: unset }
+}

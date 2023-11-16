@@ -1,0 +1,132 @@
+/*
+Developer: Aqeel Malik;
+WhatsApp : +92 302 6262164;
+Email ID : Malik.AqeelArshad@gmail.com;
+*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+/************
+RESET STYLING
+************/
+:root {
+	--brand: #C3272D;
+	--font-poppins: "Poppins", -apple-system,BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+body, .font-poppins {font-family: var(--font-poppins) !important}
+.size-xs {font-size: 10px !important}
+.size-sm {font-size: 12px !important}
+.size-md {font-size: 14px !important}
+.size-lg {font-size: 18px !important}
+.weight-md {font-weight: 600 !important}
+.text-brand {color: var(--brand) !important}
+.bg-brand {background: var(--brand) !important}
+.bg-none {background: none !important}
+.border-brand {border-color: var(--brand) !important}
+.rounded-top-0 {border-top-left-radius: 0 !important; border-top-right-radius: 0 !important}
+.rounded-bottom-0 {border-bottom-left-radius: 0 !important; border-bottom-right-radius: 0 !important}
+.rounded-left-0 {border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important}
+.rounded-right-0 {border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important}
+.focus-0:focus {box-shadow: none !important}
+.focus-brand:focus {border-color: var(--brand) !important}
+.form-control::placeholder, .custom-select::placeholder {color: #aaa}
+.form-control, .custom-select {font-size: 14px; border-color: rgba(145, 151, 158, 0.25)}
+.form-control:focus,
+.custom-select:focus {border-color: #ddd; box-shadow: 0 0 0 .2rem rgba(145, 151, 158, 0.1)}
+.form-control:not(textarea):not([class*=form-control-]),
+.custom-select:not([class*=custom-select-]) {height: calc(1.5em + .75rem + 12px)}
+.custom-select {background-image: url("../images/arrow-down.png"); background-size: auto}
+/*.nav.nav-pills .nav-link.active {background-color: var(--brand)}*/
+.nav.nav-pills .nav-link {color: var(--dark); background: transparent; border-top: 5px solid transparent; border-radius: 0}
+.nav.nav-pills .nav-link.active {color: var(--brand); background: var(--light); border-color: var(--brand)}
+
+.btn-brand {color: #fff; background-color: var(--brand); border-color: var(--brand)}
+.btn-brand:hover {color: #fff; background-color: #9E2814; border-color: #9E2814}
+.btn-brand:focus {box-shadow: 0 0 0 .2rem rgba(158, 40, 20, 0.25)}
+
+.dropdown-item.active, .dropdown-item:active,
+.dropdown-item:hover, .dropdown-item:focus {color: #fff; background-color: var(--brand); border-color: var(--brand)}
+.dropdown-item.active .text-brand, .dropdown-item:hover .text-brand, .dropdown-item:focus .text-brand {color: #fff !important}
+
+.transition-all {transition: .3s all}
+.transform-zoom:hover, .transform-zoom a:hover {transform: scale(1.05)}
+
+.site-header a:hover, .site-footer a:hover {opacity: .8}
+
+.main-menu {background: var(--light); font-size: .84rem; font-weight: 500; border-top: 1px solid #eee}
+.main-menu .nav-item {float: left}
+.main-menu .nav-item .nav-link {color: #171614; padding: .825rem 0; margin-right: 1rem}
+.main-menu .mega-menu {position: static}
+.main-menu .mega-menu .dropdown-menu {min-width: 17.5rem; width: 100%}
+.main-menu .dropdown-menu {min-width: 17.5rem; top: 2.95rem; margin: 0; background: #fff /*rgba(230, 66, 38, .85)*/}
+.main-menu .dropdown-item {color: var(--brand); font-size: 13px; padding: .5rem 1rem; border-radius: 1rem .1rem; transition: .3s all}
+.main-menu .dropdown-item:hover {color: #fff; transform: scale(1.015)}
+
+.w2a-moreless-text.show {display: initial !important}
+.w2a-moreless-btn:before {content: attr(w2a-after)}
+.w2a-moreless-btn.collapsed:before {content: attr(w2a-before)}
+
+.note-editor {font-size: 13px}
+.note-editor p {margin-bottom: 0}
+
+[class*=fa-google] {color: #dc4e41}
+[class*=fa-youtube] {color: #cd201f}
+[class*=fa-twitter] {color: #55acee}
+[class*=fa-linkedin] {color: #0077b5}
+[class*=fa-facebook] {color: #3b5998}
+[class*=fa-whatsapp] {color: #43d854}
+[class*=fa-instagram] {color: #3f729b}
+
+.stock-list .item figure {min-height: 8rem}
+.stock-list .item .title {display: block; max-height: 3.3rem; overflow: hidden}
+.brands a:hover,
+.stock-list .item:hover figure {background: #eee}
+
+
+.badge-brand {
+	color: #fff;
+	background-color: var(--brand);
+}
+
+a{
+	color: var(--brand);
+}
+a:hover{
+	color: var(--brand);
+}
+.nav-link .active{
+	color:black !important;
+}
+.removeCaret::after{display:none;}
+#cartBag 
+{
+    background-image:url('../images/bag.png');
+}
+.termsCondition li{
+    margin-top:2rem !important;
+}
+.orders-menu.active{
+    background-color: #E64327;
+    border-color: #E64327;
+}
+
+/************
+Media Queries
+************/
+@media screen and (min-width: 576px) and (max-width: 1199px) {
+	.container-max {max-width: 98%}
+}
+
+@media screen and (max-width: 767px) {
+	h2, .h2 {font-size: 1.5rem !important}
+	.main-menu .nav-item .nav-link {margin-right: 0}
+	.main-menu .nav-item .dropdown-toggle:after {float: right}
+	.stock-list .item {font-size: 12px}
+	.back-link{display: none;}
+}
+
+@media screen and (max-width: 576px) {
+	h2, .h2 {font-size: 1.2rem !important}
+}
+
+@media screen and (max-width: 280px) {
+	.stock-list .item {min-width: 100% !important}
+}
