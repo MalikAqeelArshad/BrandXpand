@@ -9,7 +9,7 @@ use App\Review;
 use App\Product;
 use App\SiteOption;
 use App\ProductStock;
-use App\HasRolesTrait;
+use App\Traits\HasRolesTrait;
 use App\Traits\MorphTrait;
 use Illuminate\Http\Request;
 use App\Traits\ImageUploadTrait;
